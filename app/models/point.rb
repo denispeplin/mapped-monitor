@@ -6,4 +6,12 @@ class Point < ActiveRecord::Base
   def gmaps4rails_address
     name
   end
+
+  def gmaps4rails_marker_picture
+    {
+      "picture" => "/images/marker-green.png",
+      "width" => "20",
+      "height" => "20",
+    }
+  end
 end
