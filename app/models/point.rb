@@ -3,6 +3,10 @@ class Point < ActiveRecord::Base
 
   acts_as_gmappable
 
+  MARKER_COLORS = ['green', 'yellow', 'red']
+
+  validates_inclusion_of :color, :in => MARKER_COLORS
+
   def gmaps4rails_address
     name
   end
