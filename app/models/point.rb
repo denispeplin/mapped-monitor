@@ -1,5 +1,5 @@
 class Point < ActiveRecord::Base
-  attr_accessible :gmaps, :latitude, :longitude, :name
+  attr_accessible :gmaps, :latitude, :longitude, :name, :color
 
   acts_as_gmappable
 
@@ -9,7 +9,7 @@ class Point < ActiveRecord::Base
 
   def gmaps4rails_marker_picture
     {
-      "picture" => "/images/marker-green.png",
+      "picture" => "/images/marker-#{color}.png",
       "width" => "20",
       "height" => "20",
     }
