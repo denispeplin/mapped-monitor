@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :color %><br />
-    <%= f.text_field :color %>
+    <%= f.select(:color, Point::MARKER_COLORS) %>
   </div>
   <div class="actions">
     <%= f.submit %>
