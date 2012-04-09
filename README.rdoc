@@ -6,3 +6,10 @@ and display results on the map
 == Application state
 
 Creating and displaying locations on map now works
+
+And it support icons with three colors!
+
+Basic ajax also added.
+
+So, with ajax timer, and some external service checker,
+basic mapped monitoring application can work
