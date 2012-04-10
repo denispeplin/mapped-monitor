@@ -6,7 +6,9 @@ class PointsController < ApplicationController
   def index
     @points = Point.all
 
-    @json = Point.all.to_gmaps4rails
+    @json = Point.all.to_gmaps4rails do |point, marker|
+      marker.json(id: point.id)
+    end
 
     respond_with @json
   end
