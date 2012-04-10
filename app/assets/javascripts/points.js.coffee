@@ -11,12 +11,12 @@ $ ->
 
 $ ->
   $('#replace_marker1').click ->
-    toClear = [ 1 ]
+    toClear = [ 1, 3 ]
     for marker in Gmaps.map.markers
       if marker.id in toClear
         Gmaps.map.clearMarker marker
     $.getJSON(
       "/points/1.json",
-      (data) ->
-        Gmaps.map.addMarkers(data)
+      (data1) ->
+        Gmaps.map.addMarkers(data1)
     )

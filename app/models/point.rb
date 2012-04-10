@@ -18,4 +18,8 @@ class Point < ActiveRecord::Base
       "height" => "20",
     }
   end
+
+  def gmaps4rails_sidebar
+    name
+  end
 end

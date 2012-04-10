@@ -28,7 +28,9 @@
 
 <%= link_to 'New Point', new_point_path %>
 
-<%= gmaps4rails(@json) %>
+<%= gmaps("markers" => {"data" => @json, "options" => {"list_container" => "markers_list" } }) %>
 
 <button id='replace_markers'>Replace markers</button>
 <button id='replace_marker1'>Replace marker 1</button>
+
+<ul id="markers_list"></ul>
