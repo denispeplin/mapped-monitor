@@ -18,10 +18,11 @@ class PointsController < ApplicationController
   def show
     @point = Point.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @point }
+    @json = @point.to_gmaps4rails do |point, marker|
+      marker.json(id: point.id)
     end
+
+    respond_with @json
   end
 
   # GET /points/new

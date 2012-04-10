@@ -8,3 +8,15 @@ $ ->
       (data) ->
         Gmaps.map.replaceMarkers(data)
     )
+
+$ ->
+  $('#replace_marker1').click ->
+    toClear = [ 1 ]
+    for marker in Gmaps.map.markers
+      if marker.id in toClear
+        Gmaps.map.clearMarker marker
+    $.getJSON(
+      "/points/1.json",
+      (data) ->
+        Gmaps.map.addMarkers(data)
+    )
