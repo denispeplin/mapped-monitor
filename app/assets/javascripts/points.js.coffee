@@ -11,7 +11,7 @@ $ ->
 
 $ ->
   $('#replace_marker1').click ->
-    toClear = [ 1, 3 ]
+    toClear = [ 1, 2 ]
     for marker in Gmaps.map.markers
       if marker.id in toClear
         Gmaps.map.clearMarker marker
